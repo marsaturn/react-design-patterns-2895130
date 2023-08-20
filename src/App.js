@@ -1,3 +1,11 @@
+import { SmallPersonListItem } from "./people/SmallPersonListItem";
+import { LargePersonListItem } from "./people/LargePersonListItem";
+import { SmallProductListItem } from "./products/SmallProductListItem";
+import { LargeProductListItem } from "./products/LargeProductListItem";
+import { NumberedList } from "./NumberedList";
+import { RegularList } from "./RegularList.js"
+import { Modal } from "./Modal";
+
 const people = [{
 	name: 'John Doe',
 	age: 54,
@@ -34,7 +42,11 @@ const products = [{
 
 function App() {
 	return (
-		<h1>Your code goes here</h1>
+		<>
+			<Modal>
+				<LargeProductListItem product={products[0]}/>
+			</Modal>
+		</>
 	);
 }
 
